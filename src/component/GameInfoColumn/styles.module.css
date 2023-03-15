@@ -1,0 +1,78 @@
+.column {
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+.game-info {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.join-link {
+  padding-top: 0.5rem;
+  color: var(--light-gray-color);
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.user-icon {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  -moz-backdrop-filter: blur(3px);
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  top: -1rem;
+  left: -2rem;
+}
+
+.user-icon > svg {
+  width: 1.5rem;
+  transform: translate(1px, -1px);
+}
+
+.clock {
+  color: var(--primary-color);
+  padding: 0.75rem 2rem;
+  background-color: white;
+  border-radius: 100rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.image-container {
+  margin-top: auto;
+  position: relative;
+}
+
+.image-container > img {
+  transform: translateY(10px);
+}
+
+.floating-image {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+}

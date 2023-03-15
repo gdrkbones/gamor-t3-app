@@ -1,0 +1,128 @@
+.main {
+  padding-bottom: var(--main-padding);
+}
+
+.title {
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.category-list-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-secondary-color);
+  border-radius: 0.5rem;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.category-list-item > * {
+  padding-bottom: 0.5rem;
+  width: fit-content;
+}
+
+.category-item-index {
+  position: relative;
+  color: var(--font-gray-color);
+  font-weight: 600;
+}
+
+.category-item-index-decorator {
+  position: absolute;
+  height: 2rem;
+  width: 1.5rem;
+  bottom: 0;
+  left: -0.5em;
+  border-top-width: 1px;
+  border-top-style: solid;
+  transform: rotate(-45deg);
+}
+
+.category-item-name {
+  font-weight: bold;
+}
+
+.category-link {
+  transform: translateX(0);
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.category-item-title {
+  text-transform: uppercase;
+  color: var(--font-gray-color);
+}
+
+.bg-image {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.bg-color-filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.category-list-item:hover > .bg-image,
+.category-list-item:hover > .bg-color-filter {
+  opacity: 0.5;
+}
+
+.category-list-item:hover .category-item-index-decorator {
+  border-color: transparent !important;
+}
+
+.category-list-item:hover > .category-link {
+  transform: translateX(2rem);
+}
+
+@media (max-width: 799px) {
+  .category-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .category-list-item:nth-child(6),
+  .category-list-item:nth-child(7) {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  .category-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  .category-list-item:nth-child(6),
+  .category-list-item:nth-child(7) {
+    display: flex;
+  }
+}

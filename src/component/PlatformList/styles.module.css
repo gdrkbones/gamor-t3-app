@@ -1,0 +1,139 @@
+.game-searching {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--contrast-primary-color);
+  border-radius: 1rem;
+  border: 0.1px solid var(--light-gray-color);
+  position: relative;
+}
+
+.game-selection {
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+  border-bottom: 0.1px solid var(--light-gray-color);
+  cursor: pointer;
+  width: 100%;
+}
+
+.game-name {
+  flex-grow: 1;
+  font-weight: bold;
+}
+.game-select-icon {
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5 rem;
+  display: block;
+}
+
+.platform-list {
+  width: 100%;
+  overflow-y: hidden;
+  max-height: calc(100vh - var(--navbar-height) - var(--main-padding) - 24rem);
+}
+
+.platform-list-wrapper {
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.platform-item {
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.platform-item-index {
+  background-color: var(--bg-primary-color);
+  border-radius: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-weight: bold; */
+}
+
+.platform-item-index > span {
+  line-height: 1em;
+}
+
+.platform-item-name {
+  flex-grow: 1;
+  padding-left: 1rem;
+}
+
+.platform-item-users {
+  display: flex;
+  width: 3.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.avatar-mini {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+}
+
+.avatar-mini:not(:first-child) {
+  margin-left: -0.5rem;
+}
+
+.platform-item-action {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-item-action > svg {
+  width: 0.8rem;
+}
+
+.search-action {
+  width: 90%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 23px 20px rgba(0, 0, 0, 0.3),
+    0px -60px 20px rgba(255, 255, 255, 0.7);
+  background-color: var(--contrast-secondary-color);
+  position: absolute;
+  bottom: 1rem;
+  border-radius: 1rem;
+  color: var(--contrast-primary-color);
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+  .game-searching {
+    background-color: var(--bg-primary-color);
+
+    border: none;
+  }
+  .game-selection {
+    border-bottom-color: var(--bg-secondary-color);
+  }
+  .platform-item-index {
+    background-color: var(--contrast-primary-color);
+  }
+  .search-action {
+    box-shadow: 0px -60px 20px rgba(0, 0, 0, 0.3);
+    background-color: var(--contrast-secondary-color);
+    color: var(--contrast-primary-color);
+  }
+}

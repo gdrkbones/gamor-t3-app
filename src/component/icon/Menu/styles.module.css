@@ -1,0 +1,43 @@
+.item {
+  position: relative;
+  width: 20px;
+  aspect-ratio: 1/1;
+}
+
+.item > span {
+  position: absolute;
+  display: block;
+  height: 20%;
+  width: 100%;
+  background-color: currentColor;
+  transform-origin: center center;
+  transition-property: transform, top, bottom;
+  transition-duration: 0.3s;
+}
+
+.item > span:nth-child(1) {
+  top: 0;
+}
+
+.item > span:nth-child(2) {
+  transform: translateY(50%);
+  bottom: 50%;
+}
+
+.item > span:nth-child(3) {
+  bottom: 0;
+}
+
+.item.open > span:nth-child(1) {
+  transform: translateY(-50%) rotate(45deg);
+  top: 50%;
+}
+
+.item.open > span:nth-child(2) {
+  transform: scaleX(0);
+}
+
+.item.open > span:nth-child(3) {
+  transform: translateY(50%) rotate(-45deg);
+  bottom: 50%;
+}

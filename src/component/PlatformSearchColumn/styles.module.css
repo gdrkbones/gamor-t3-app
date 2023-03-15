@@ -1,0 +1,37 @@
+.column {
+  background-color: var(--bg-secondary-color);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+.section {
+  width: 100%;
+}
+
+.section:not(:first-of-type) {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.number-indicator {
+  color: var(--font-gray-color);
+  font-weight: bold;
+  transform: translateY(-2px);
+}
+
+.name {
+  padding-left: 0.4rem;
+}

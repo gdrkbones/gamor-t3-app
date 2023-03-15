@@ -1,0 +1,64 @@
+.picker-wrapper {
+  padding: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 1000rem;
+  border: 0.1px solid var(--light-gray-color);
+}
+
+.picker {
+  display: flex;
+  width: 100%;
+  border-radius: 1000rem;
+  position: relative;
+  z-index: 0;
+}
+
+.picker-option {
+  /* flex-grow: 1; */
+  padding: calc(1rem - 5px);
+  border-radius: 1000rem;
+  display: flex;
+  justify-content: center;
+}
+
+.picker-option:hover {
+  cursor: pointer;
+}
+
+.picker-option.selected {
+}
+
+.emoji {
+  width: 0;
+  overflow: hidden;
+  transition-property: width;
+  transition-duration: 0.2s;
+}
+
+.picker-option.selected > span.emoji {
+  width: 2rem;
+}
+
+.bg-decorator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* left: 5px;
+  right: 5px; */
+  background-color: var(--bg-primary-color);
+  z-index: -1;
+  transition-property: left;
+  transition-duration: 0.2s;
+  border-radius: 1000rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .picker-wrapper {
+    background-color: var(--bg-primary-color);
+    border: none;
+  }
+  .bg-decorator {
+    background-color: var(--light-gray-color);
+  }
+}

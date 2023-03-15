@@ -1,0 +1,15 @@
+.ellipse-link {
+  position: relative;
+}
+.ellipse-link > svg {
+  display: none;
+  stroke-width: 0.5px;
+}
+
+.ellipse-link:active > svg,
+.ellipse-link:hover > svg {
+  display: block;
+  position: absolute;
+  width: 5.4em;
+  transform: rotate(-14deg) translate(-0.5em, -1.2em);
+}
